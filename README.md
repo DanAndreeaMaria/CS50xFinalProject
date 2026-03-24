@@ -16,7 +16,7 @@ In the middle column, by clicking on 'Result' button, the app calculates the tot
 Finally, the right column provides a history feature. Users can select a specific date using the calendar input and the app will fetch data from the backend for that specific date. Here is implemented a feedback system, if the user reached a recommended target for a specific nutrient, a success message is shown. If not, the app suggests which nutrient could use improvements. This creates a sense of progress and provides guidance, helping users learn from the data.
 
 #### Project structure:
-
+```
 FINAL_PROJECT/
 │
 ├── flask_session # The Flask stores session data for each user in this folder, which allows the app to keep track of logged-in users securely on the server. Even if the folder appears empty, it is used automatically whenever a session is created.
@@ -96,7 +96,7 @@ Fields: id – unique identifier for each user
 ├── food.csv # The CSV folder (comma separated values) which contains plain-text data about the food items, their category and their nutrient values
 │
 └── import_csv.py # The helper Python script in the project which role to import data from food.csv to SQLite database food_nutrients.db. This allows the app to transform raw CSV data into a structured format stored in the database so the Flask app can query it efficiently
-
+```
 
 
 
