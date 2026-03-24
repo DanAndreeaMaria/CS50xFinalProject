@@ -1,0 +1,89 @@
+{% extends "layout.html" %} {% block main %}
+<link
+  rel="stylesheet"
+  href="{{ url_for('static', filename='css/track.css')}}"
+/>
+<div class="container-fluid mt-5">
+  <div class="row mt-5">
+    <!-- Left column -->
+    <div class="col-md-4">
+      <div class="glass-container p-4 mb-4">
+        <h2 class="text-start text-success mt-3 mb-3">Track Food Nutrients</h2>
+        <h6 class="text-start text-secondary fw-light mb-5">
+          Select food items from the list, save them and then press 'Result' to
+          calculate the nutritional values.
+        </h6>
+        <!-- Search input -->
+        <input
+          class="form-control light-font"
+          autocomplete="off"
+          autofocus
+          placeholder="Type some food here..."
+          type="search"
+          style="max-width: 500px"
+        />
+
+        <!-- Search results -->
+        <ul id="search-results" class="list-group mt-3"></ul>
+
+        <!-- Selected items -->
+        <h3 class="mt-4 mb-4">Selected Items</h3>
+        <ul
+          id="selected-items"
+          class="list-group mb-3"
+          style="max-width: 500px"
+        ></ul>
+
+        <!-- Save option -->
+        <div class="d-flex text-start">
+          <button
+            type="button"
+            class="btn btn-success mt-3 mb-3"
+            onclick="saveItems()"
+          >
+            Save Items
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Results column -->
+    <div class="col-md-4 mb-4">
+      <div class="glass-container p-4">
+        <h2 class="text-start text-success mt-3 mb-3">See results</h2>
+
+        <button
+          class="btn btn-success mt-3 mb-5"
+          onclick="calculateLocalTotals()"
+        >
+          Result
+        </button>
+        <div id="totals" class="mt-4"></div>
+      </div>
+    </div>
+
+    <!-- Check history -->
+    <div class="col-md-4">
+      <div class="glass-container p-4 mt-auto">
+        <h2 class="text-start text-success mt-3 mb-3">Check history</h2>
+        <div class="my-4">
+          <label for="historyDate" class="form-label"
+            >Select a date to view nutrient history:</label
+          >
+          <input
+            type="date"
+            id="historyDate"
+            class="form-control"
+            style="max-width: 250px"
+          />
+          <div
+            id="historyResult"
+            class="mt-3 mb-3 fw-light text-secondary"
+          ></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="{{ url_for('static', filename='js/track.js') }}"></script>
+  {% endblock %}
+</div>

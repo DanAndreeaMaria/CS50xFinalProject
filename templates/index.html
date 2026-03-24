@@ -1,0 +1,148 @@
+{% extends "layout.html" %} {% block title %} Home {% endblock %} {% block main
+%}
+<!-- Description -->
+<div class="container col-xxl-8 px-4 py-5">
+  <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+    <div class="col-10 col-sm-8 col-lg-6">
+      <img
+        class="d-block mx-lg-auto img-fluid rounded"
+        src="{{ url_for('static', filename='media/hero-img.jpg')}}"
+        alt="Whole Foods"
+        style="border-radius: 30px !important"
+      />
+    </div>
+    <div class="col-lg-6">
+      <h1 class="display-5 fw-bold lh-1 mb-3">
+        Let's track your daily nutrients!
+      </h1>
+      <p class="lead fs-4">
+        Stay in control of your nutrition, one food at a time. Build better
+        habits with every log.
+      </p>
+      <button type="button" class="btn btn-success btn-lg">
+        <a
+          class="link-light link-offset-2 link-underline link-underline-opacity-0"
+          href="{{ url_for('track') }}"
+          >Track here</a
+        >
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Info Cards - about the 6 most important food categories -->
+<div class="container-fluid">
+  <div class="row justify-content-center">
+    <div class="col-sm-6 col-md-4 col-lg-3 m-2">
+      <div class="card h-100">
+        <img
+          class="card-img-top img-fluid"
+          src="{{ url_for('static', filename='media/fruit.jpg')}}"
+          alt="Diverse fruit"
+        />
+        <div class="card-body">
+          <p class="card-text">
+            <strong>Fruits</strong> are rich in vitamins, fiber, and
+            antioxidants. They support immune health, skin vitality, and
+            digestion. Naturally sweet and hydrating, they're a great source of
+            quick energy and essential nutrients like vitamin C and potassium.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-6 col-md-4 col-lg-3 m-2">
+      <div class="card h-100">
+        <img
+          class="card-img-top img-fluid"
+          src="{{ url_for('static', filename='media/vegetables.jpg')}}"
+          alt="Diverse vegetables"
+        />
+        <div class="card-body">
+          <p class="card-text">
+            <strong>Vegetables</strong> are packed with fiber, minerals, and
+            phytonutrients. Low in calories but high in volume, they promote
+            fullness, gut health, and disease prevention. Leafy greens,
+            cruciferous veggies, and colorful varieties offer the greatest
+            benefits.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-6 col-md-4 col-lg-3 m-2">
+      <div class="card h-100">
+        <img
+          class="card-img-top img-fluid"
+          src="{{ url_for('static', filename='media/legumes.jpg')}}"
+          alt="Diverse legumes"
+        />
+        <div class="card-body">
+          <p class="card-text">
+            <strong>Legumes</strong> — like beans, lentils, and chickpeas — are
+            excellent plant-based protein sources. They're rich in fiber, iron,
+            and complex carbs, making them ideal for sustained energy, heart
+            health, and blood sugar control.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row justify-content-center">
+    <div class="col-sm-6 col-md-4 col-lg-3 m-2">
+      <div class="card h-100">
+        <img
+          class="card-img-top img-fluid"
+          src="{{ url_for('static', filename='media/nuts.jpg')}}"
+          alt="Diverse nuts"
+        />
+        <div class="card-body">
+          <p class="card-text">
+            <strong>Nuts</strong> are energy-dense foods loaded with healthy
+            fats, protein, and antioxidants. Just a small handful can boost
+            brain function, heart health, and satiety. Popular varieties include
+            almonds, walnuts, and cashews.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-6 col-md-4 col-lg-3 m-2">
+      <div class="card h-100">
+        <img
+          class="card-img-top img-fluid"
+          src="{{ url_for('static', filename='media/whole-grains.jpg')}}"
+          alt="Whole grains"
+        />
+        <div class="card-body">
+          <p class="card-text">
+            <strong>Whole grains</strong> are nutrient-packed staples rich in
+            fiber, vitamins, and minerals. They support digestion, heart health,
+            and steady energy. Common examples include oats, brown rice, quinoa,
+            and whole wheat.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-6 col-md-4 col-lg-3 m-2">
+      <div class="card h-100">
+        <img
+          class="card-img-top img-fluid"
+          src="{{ url_for('static', filename='media/seeds.jpg')}}"
+          alt="Diverse seeds"
+        />
+        <div class="card-body">
+          <p class="card-text">
+            <strong>Seeds</strong> such as chia, flax, and pumpkin, are
+            nutritional powerhouses. They deliver omega-3s, protein, fiber, and
+            essential minerals like zinc and magnesium. They support metabolism,
+            inflammation control, and overall wellness.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
